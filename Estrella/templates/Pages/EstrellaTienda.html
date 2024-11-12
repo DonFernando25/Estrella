@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>★Tienda★</title>
+  {% load static %}
+  <link rel="icon" href="{% static 'img/estrella.png' %}" type="image/x-icon">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.rtl.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  
+</head>
+
+<body class="vh-100 d-flex flex-column">
+  {% include 'base/header.html'%}
+
+  <main>
+    <div class="container"><br>
+      <h1>
+        <center>Tienda Oficial</center>
+      </h1><br>
+
+      <div class="row">
+        {% for producto in productos %}
+        <div class="col-md-4 mb-4">
+          <div class="card" style="width: 18rem;">
+            <img src="{{ producto.fotografia.url }}" class="card-img-top" alt="{{ producto.nombre }}" width="95" height="300">
+            <div class="card-body">
+              <h5 class="card-title">
+                <center>{{ producto.nombre }}</center>
+              </h5>
+              <p class="card-text">
+                <center>${{ producto.precio }}</center>
+              </p>
+              <div class="text-center">
+                <a href="{% url producto.url_compra %}" class="btn btn-warning" style="color: black;">Comprar</a>
+            </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+  </main><br>
+  {% include 'base/footer.html'%}
+
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+
+</html>
