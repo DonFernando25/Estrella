@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^601v$lmxanf0lurezlldb0rqh@!(^q#rtox88=^%2f)r&j&q9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['estrella-1.onrender.com']
 
 
 # Application definition
