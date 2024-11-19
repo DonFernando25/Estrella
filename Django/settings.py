@@ -133,3 +133,10 @@ LOGOUT_REDIRECT_URL = 'IniSe'
 CSRF_COOKIE_SECURE = False  
 SESSION_COOKIE_SECURE = False  
 CSRF_USE_SESSIONS = True
+
+STATIC_URL= '/static/'
+staticfiles_DIRS=[
+    os.path.join(BASE_DIR,'Estrella','static'),
+]
+
+STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles')
