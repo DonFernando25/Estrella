@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'Django.urls'
@@ -134,9 +135,9 @@ CSRF_COOKIE_SECURE = False
 SESSION_COOKIE_SECURE = False  
 CSRF_USE_SESSIONS = True
 
-STATIC_URL= '/static/'
-staticfiles_DIRS=[
-    os.path.join(BASE_DIR,'Estrella','static'),
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'Estrella', 'static'),  
 ]
-
-STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
