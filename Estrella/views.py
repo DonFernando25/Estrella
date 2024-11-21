@@ -58,7 +58,7 @@ def page11(request):
 
 def page5(request):
     if request.method != "POST":
-        return render(request, "pages/EstrellaFormulario.html")
+        return render(request, "Pages/EstrellaFormulario.html")
     else:
         rut = request.POST["rut"]
         nombre = request.POST["nombre"]
@@ -83,7 +83,7 @@ def page5(request):
         context = {
             "mensaje": "Registro Exitoso",
         }
-        return render(request, "pages/EstrellaFormulario.html", context)
+        return render(request, "Pages/EstrellaFormulario.html", context)
     
 @admin_required
 def lista_usuario(request):

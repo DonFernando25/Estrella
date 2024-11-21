@@ -14,7 +14,10 @@
     
     
 </head>
+
 <body>
+
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -50,13 +53,14 @@
                                 <li><a class="dropdown-item" href="{% url 'logout' %}">Cerrar Sesión</a></li>
                             {% else %}
                                 <li><a class="dropdown-item" href="{% url 'IniSe' %}">Iniciar Sesión</a></li>
+                                <li><a class="dropdown-item" href="{% url 'Formulario' %}">Registrarse</a></li>
                             {% endif %}
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav><br>
 
     <main>
         <div class="container-fluid px-0">
